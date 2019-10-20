@@ -37,7 +37,7 @@ $mes = ("Your OTP is $opt");
 	 $api_keys = $get_data_sms->api_key;
 	 $senderid = $get_data_sms->sender_id;
     
-	$url = "http://nejoumaljazeera.com/rest_api.php";
+	$url = "http://elitbuzz-me.com/sms/smsapi";
 	$array = array("api_key" => $api_keys,
 	"type" => 'text',
 	"contacts" => $mymob,
