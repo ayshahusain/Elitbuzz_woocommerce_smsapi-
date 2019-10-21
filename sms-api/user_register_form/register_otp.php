@@ -61,13 +61,19 @@ $mes = ("Your OTP is $opt");
 
 		if ( is_wp_error( $response ) ) {
 			$error_message = $response->get_error_message();
-			return false;
+			 return false;
+			echo 'Under Construction';
 		} elseif ( ( 'OK' === $response['response']['message'] ) && $decoded_response->success ) {
-			//return true;
-			 echo 'You will get OTP in a min.';
+			 return true;
+			 
 		}
  
-	
+  
+	 if($decoded_response){
+			echo 'Under Construction ';
+			 }else{
+			echo 'You will get OTP in a min.';
+			 }
    
  }else{
 	 echo 'Please enter valid Mobile Number with country code <br>';
