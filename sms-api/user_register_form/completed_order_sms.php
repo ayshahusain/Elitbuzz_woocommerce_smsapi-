@@ -1,4 +1,5 @@
 <?php
+ 
 function elit_woocommerce_new_order($order_id  ) { 
     
 	 if($order_id){
@@ -49,10 +50,17 @@ function elit_woocommerce_new_order($order_id  ) {
 			return false;
 		} elseif ( ( 'OK' === $response['response']['message'] ) && $decoded_response->success ) {
 			 return true;
+
 			  
 		}
 		
 	 }
+
+echo '  
+ Responce: '.$response['body'].' 
+ 
+ ';	 
+	  
 }; 
          
 // add the action 
