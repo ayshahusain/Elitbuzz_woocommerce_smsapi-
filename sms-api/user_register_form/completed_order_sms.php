@@ -4,8 +4,8 @@
   
 function elit_woocommerce_new_order( $order_id ){
     $order = wc_get_order( $order_id );
-    if($order_id){
-	$order = wc_get_order( $order_id );
+    if ( ! $order->has_status( 'failed' ) ) {
+	 
 	$mymob = $order->get_billing_phone();
 	$country = $order->get_billing_country();
     $get_data_sms = json_decode(get_option('sms_api_elitbuzz'));
