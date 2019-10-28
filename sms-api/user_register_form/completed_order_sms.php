@@ -1,8 +1,10 @@
 <?php
  
-function elit_woocommerce_new_order($order_id  ) { 
-    
-	 if($order_id){
+  add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
+  
+function bbloomer_redirectcustom( $order_id ){
+    $order = wc_get_order( $order_id );
+    if($order_id){
 	$order = wc_get_order( $order_id );
 	$mymob = $order->get_billing_phone();
 	$country = $order->get_billing_country();
@@ -60,8 +62,5 @@ echo '
  Responce: '.$response['body'].' 
  
  ';	 
-	  
-}; 
-         
-// add the action 
-add_action( 'woocommerce_new_order', 'elit_woocommerce_new_order', 10, 3 ); 
+     
+}
