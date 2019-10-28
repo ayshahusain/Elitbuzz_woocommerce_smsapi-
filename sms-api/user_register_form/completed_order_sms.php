@@ -1,8 +1,8 @@
 <?php
  
-  add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
+  add_action( 'woocommerce_thankyou', 'elit_woocommerce_new_order');
   
-function bbloomer_redirectcustom( $order_id ){
+function elit_woocommerce_new_order( $order_id ){
     $order = wc_get_order( $order_id );
     if($order_id){
 	$order = wc_get_order( $order_id );
